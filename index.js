@@ -6,13 +6,14 @@ const port = 1337;
 app.use('/', express.static('./'));
 
 app.get('/id/:key', (req, res) => {
-  console.log('requested!!!');
+  //console.log('requested!!!');
   let key = req.params.key;
   axios.get(`http://fec-picture-service-amazon.us-east-1.elasticbeanstalk.com/id/${key}`)
     .then(results => {
-      console.log(results);
-      res.send('great work team')
+      //console.log(results);
+      res.send(results.data)
     })
+    .catch(err => {console.log('error in pictures,', err)})
 });
 
 

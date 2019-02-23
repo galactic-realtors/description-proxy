@@ -1,13 +1,55 @@
 #container {
   display: grid;
-  grid-template-areas: "picture description cart"
+  grid-template-areas: "nav nav nav"
+                       "picture description cart"
                        "similar similar similar"
                        "review review review";
-  grid-template-rows: minMax(200px, 500px) auto 1fr;
-  grid-template-columns: 2fr 1fr 1fr;
-  grid-template-columns: 3fr 2fr 250px;
+  grid-template-rows: 100px minMax(200px, 500px) auto 1fr;
+  /* grid-template-columns: 2fr 1fr 1fr; */
+  grid-template-columns: auto auto 250px;
   
   /* background: linear-gradient(to right, rgba(196,225,127,1) 0%, rgba(196,225,127,1) 12%, rgba(247,253,202,1) 12%, rgba(247,253,202,1) 25%, rgba(250,208,113,1) 25%, rgba(250,208,113,1) 39%, rgba(240,118,107,1) 39%, rgba(240,118,107,1) 52%, rgba(219,157,190,1) 52%, rgba(219,157,190,1) 65%, rgba(196,156,223,1) 65%, rgba(196,156,223,1) 78%, rgba(101,153,226,1) 78%, rgba(101,153,226,1) 89%, rgba(97,194,228,1) 89%, rgba(97,194,228,1) 100%); */
+}
+#nav {
+  grid-area: nav;
+  width: 100%;
+  background-color: #232f3f;
+  margin-bottom: 10px;
+}
+
+.nav-fill {
+  grid-column-start: 2;
+  background-color: orange;
+  border: 2px orange;
+  width: 50%;
+  height: 42px;
+  margin-top:auto;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+}
+
+#search-box {
+  grid-column-start: 2;
+  width: 50%;
+  height: 35px;
+  outline-color: orange;
+  border-radius: 5px;
+}
+
+#search-icon {
+  width: 20px;
+  height: 20px;
+}
+
+#nav-search-label {
+  color: white;
+}
+
+.nav-input {
+  background-image: 'https://s3.us-east-2.amazonaws.com/interstellar-icons/search-solid.svg';
+  width: 20px;
+  height: 20px;
 }
 
 #picture {
@@ -23,9 +65,11 @@
   /* background-color: rgba(250,208,113,1); */
 }
 
-#desc #descriptions {
+#desc {
   grid-area: description;
   border: black solid 1px;
+  margin-right: 10px;
+  margin-top: 5px
   /* background-color: rgba(196,225,127,1); */
 }
 
@@ -33,6 +77,7 @@
   grid-area: cart;
   border: black solid 1px;
   justify-items: right;
+  margin-top: 5px
   /* background-color: rgb(94, 181, 60); */
 }
 
