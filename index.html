@@ -18,10 +18,16 @@
       <form accept-charset="utf-8" class="nav-searchbar">
         <div class="nav-top">
           <div class="nav-middle nav-sprite">
+            <div class="grip-lines">
+              <i class="fas fa-bars"></i>
+              <image src="https://s3.us-east-2.amazonaws.com/interstellar-icons/bars-solid.svg" id="lines"></image>
+            </div>
             <div class="nav-fill">
               <div class="nav-search-field ">
                 <input type="text" class="search-box" id="search-box" value="" autocomplete="off" placeholder="Space Probe">
-                <input type="image" class="nav-input" alt="Submit" tabindex="20" src="https://s3.us-east-2.amazonaws.com/interstellar-icons/search-solid.svg">
+                <div id="submit-btn">
+                  <input type="image" class="nav-input" alt="Submit" tabindex="20" src="https://s3.us-east-2.amazonaws.com/interstellar-icons/search-solid.svg">
+                </div>
               </div>
             </div>
           </div>
@@ -37,8 +43,7 @@
     <div id="reviews"> </div>
   </div>
   <script src="http://fec-picture-service-amazon.us-east-1.elasticbeanstalk.com/bundle.js"> </script>
-  <!-- <script src="http://interstellar-desc.us-east-2.elasticbeanstalk.com/bundle.js"> </script> -->
-  <script src="http://localhost:4000/bundle.js"></script>
+  <script src="http://interstellar-desc.us-east-2.elasticbeanstalk.com/bundle.js"> </script>
   <script src="http://carts.us-east-2.elasticbeanstalk.com/bundle.js"> </script>
   <script src="http://reviews.us-east-2.elasticbeanstalk.com/bundle.js"> </script>
 

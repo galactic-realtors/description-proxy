@@ -5,10 +5,8 @@
                        "similar similar similar"
                        "review review review";
   grid-template-rows: 100px minMax(200px, 500px) auto 1fr;
-  /* grid-template-columns: 2fr 1fr 1fr; */
-  grid-template-columns: auto auto 250px;
+  grid-template-columns: minMax(600px, 1000px) auto 280px;
   
-  /* background: linear-gradient(to right, rgba(196,225,127,1) 0%, rgba(196,225,127,1) 12%, rgba(247,253,202,1) 12%, rgba(247,253,202,1) 25%, rgba(250,208,113,1) 25%, rgba(250,208,113,1) 39%, rgba(240,118,107,1) 39%, rgba(240,118,107,1) 52%, rgba(219,157,190,1) 52%, rgba(219,157,190,1) 65%, rgba(196,156,223,1) 65%, rgba(196,156,223,1) 78%, rgba(101,153,226,1) 78%, rgba(101,153,226,1) 89%, rgba(97,194,228,1) 89%, rgba(97,194,228,1) 100%); */
 }
 #nav {
   grid-area: nav;
@@ -17,74 +15,79 @@
   margin-bottom: 10px;
 }
 
+#lines {
+  width: 30px;
+  height: 30px;
+  color: black;
+}
+
+.grip-lines {
+  float: left;
+  margin-left: 20px;
+  border: 1px solid;
+  border-color: black;
+}
+
 .nav-fill {
-  grid-column-start: 2;
-  background-color: orange;
-  border: 2px orange;
   width: 50%;
-  height: 42px;
-  margin-top:auto;
-  margin-left: auto;
-  margin-right: auto;
+  height: 44px;
+  margin: 25px auto;
   border-radius: 5px;
 }
 
 #search-box {
-  grid-column-start: 2;
-  width: 50%;
+  display: inline-block;
+  width: 80%;
   height: 35px;
+  margin: 1px;
   outline-color: orange;
   border-radius: 5px;
 }
 
-#search-icon {
-  width: 20px;
-  height: 20px;
-}
-
-#nav-search-label {
-  color: white;
+#submit-btn {
+  display: inline-block;
+  background-color: orange;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  vertical-align: middle;
+  align-content: center;
 }
 
 .nav-input {
-  background-image: 'https://s3.us-east-2.amazonaws.com/interstellar-icons/search-solid.svg';
   width: 20px;
   height: 20px;
+  margin-left: 8px;
+  margin-top: 8px;
 }
 
 #picture {
   grid-area: picture;
-  border: black solid 1px;
   margin: 5px;
-  /* background-color: #8ca0ff; */
 }
 
 #similar {
   grid-area: similar;
-  border: black solid 1px;
-  /* background-color: rgba(250,208,113,1); */
 }
 
 #desc {
   grid-area: description;
-  border: black solid 1px;
+  margin-left: 10px;
   margin-right: 10px;
   margin-top: 5px
-  /* background-color: rgba(196,225,127,1); */
 }
 
 #cart {
   grid-area: cart;
-  border: black solid 1px;
   justify-items: right;
-  margin-top: 5px
-  /* background-color: rgb(94, 181, 60); */
+  margin-top: 5px;
+  /* border: .5px solid grey; */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #reviews {
   grid-area: review;
-  border: black solid 1px;
   margin-top: 10px;
-  /* background-color: rgb(134, 119, 232); */
 }
 

@@ -1,8 +1,11 @@
-const express = require('express');
+const express = require('express')
 const app = express();
 const axios = require('axios')
+const bodyParser = require('body-parser')
 const port = 1337;
 
+app.use(bodyParser.urlencoded({ extended: false })) 
+app.use(bodyParser.json())
 app.use('/', express.static('./'));
 
 app.get('/id/:key', (req, res) => {
@@ -25,6 +28,17 @@ app.get('/test', (req, res) => {
     .catch(err => {
       console.log(err, 'err');
       res.send(err);
+    })
+});
+
+app.post('/review', (req, res) => {
+  let post = req.body
+  axios.post('http://reviews.us-east-2.elasticbeanstalk.com/review/', post)
+    .then(results => {
+      res.send(results.data)
+    })
+    .catch(err => {
+      console.log(err, 'err');
     })
 });
 
