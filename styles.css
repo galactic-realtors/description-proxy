@@ -18,7 +18,7 @@
 #lines {
   width: 30px;
   height: 30px;
-  color: black;
+  color: white;
 }
 
 .grip-lines {
@@ -40,13 +40,13 @@
   width: 80%;
   height: 35px;
   margin: 1px;
-  outline-color: orange;
+  outline-color:rgb(255, 165, 0);
   border-radius: 5px;
 }
 
 #submit-btn {
   display: inline-block;
-  background-color: orange;
+  background-color: rgb(255, 165, 0);
   width: 40px;
   height: 40px;
   border-radius: 5px;
