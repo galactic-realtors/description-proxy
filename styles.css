@@ -1,13 +1,32 @@
 #container {
   display: grid;
-  grid-template-areas: "nav nav nav"
+  grid-template-areas: "title title title"
+                       "nav nav nav"
                        "picture description cart"
                        "similar similar similar"
                        "review review review";
-  grid-template-rows: 100px minMax(200px, 500px) auto 1fr;
+  grid-template-rows: 58px 100px minMax(200px, 500px) auto 1fr;
   grid-template-columns: minMax(600px, 1000px) auto 280px;
   
 }
+
+.title {
+  width: 100%;
+  text-align: left;
+  font-family: 'Play', sans-serif;
+  font-size: 50px;
+  letter-spacing: 5px;
+  transform: scale(1, .7);
+  margin-bottom: 25px;
+}
+
+
+#logo {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}
+
 #nav {
   grid-area: nav;
   width: 100%;
@@ -19,13 +38,15 @@
   width: 30px;
   height: 30px;
   color: white;
+  vertical-align: middle;
 }
 
 .grip-lines {
   float: left;
   margin-left: 20px;
   border: 1px solid;
-  border-color: black;
+  border-color: white;
+  padding: 3px
 }
 
 .nav-fill {
@@ -82,7 +103,7 @@
   justify-items: right;
   margin-top: 5px;
   /* border: .5px solid grey; */
-  margin-left: auto;
+  margin-left: 20px;
   margin-right: auto;
 }
 
