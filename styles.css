@@ -5,7 +5,7 @@
                        "picture description cart"
                        "similar similar similar"
                        "review review review";
-  grid-template-rows: 58px 100px minMax(200px, 500px) auto 1fr;
+  grid-template-rows: 58px 100px minMax(200px, 450px) auto 1fr;
   grid-template-columns: minMax(600px, 1000px) auto 280px;
   
 }
