@@ -1,0 +1,114 @@
+#container {
+  display: grid;
+  grid-template-areas: "title title title"
+                       "nav nav nav"
+                       "picture description cart"
+                       "similar similar similar"
+                       "review review review";
+  grid-template-rows: 58px 100px minMax(200px, 450px) auto 1fr;
+  grid-template-columns: minMax(600px, 1000px) auto 280px;
+  
+}
+
+.title {
+  width: 100%;
+  text-align: left;
+  font-family: 'Play', sans-serif;
+  font-size: 50px;
+  letter-spacing: 4px;
+  transform: scale(1, .7);
+  margin-bottom: 25px;
+}
+
+
+#logo {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}
+
+#nav {
+  grid-area: nav;
+  width: 100%;
+  background-color: #232f3f;
+  margin-bottom: 10px;
+}
+
+#lines {
+  width: 30px;
+  height: 30px;
+  color: white;
+  vertical-align: middle;
+}
+
+.grip-lines {
+  float: left;
+  margin-left: 20px;
+  border: 1px solid;
+  border-color: white;
+  padding: 3px
+}
+
+.nav-fill {
+  width: 50%;
+  height: 44px;
+  margin: 25px auto;
+  border-radius: 5px;
+}
+
+#search-box {
+  display: inline-block;
+  width: 80%;
+  height: 35px;
+  margin: 1px;
+  outline-color:rgb(255, 165, 0);
+  border-radius: 5px;
+}
+
+#submit-btn {
+  display: inline-block;
+  background-color: rgb(255, 165, 0);
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  vertical-align: middle;
+  align-content: center;
+}
+
+.nav-input {
+  width: 20px;
+  height: 20px;
+  margin-left: 8px;
+  margin-top: 8px;
+}
+
+#picture {
+  grid-area: picture;
+  margin: 5px;
+}
+
+#similar {
+  grid-area: similar;
+}
+
+#desc {
+  grid-area: description;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 5px
+}
+
+#cart {
+  grid-area: cart;
+  justify-items: right;
+  margin-top: 5px;
+  /* border: .5px solid grey; */
+  margin-left: 20px;
+  margin-right: auto;
+}
+
+#reviews {
+  grid-area: review;
+  margin-top: 10px;
+}
+
